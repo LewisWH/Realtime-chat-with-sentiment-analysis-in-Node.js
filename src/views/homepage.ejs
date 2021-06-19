@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Chatroom w/ Sentiment Analysis</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- SOCKET IO CDN -->
+        <script src="/socket.io/socket.io.js"></script>        
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <!-- CHART.JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+        <!-- FAVICON -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../images/favs/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favs/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favs/favicon-16x16.png">
+        <link rel="manifest" href="../images/favs/site.webmanifest">
+    </head>
+    <body>
+    <ul id="navbar">
+        <li class="navlink navlink-left"><a href="index.html">Realtime Chat w/ Sentiment Analysis</a></li>
+        <li class="navlink navlink-right"><a href="https://github.com/LewisWH" target="_blank">GitHub</a></li>
+    </ul>
+    <div class="row" id="main-row">
+        <div class="col" id="main-col-1">
+            <ul id="messages">
+                <li class="list2">
+                    <div class="username">Admin</div><br>
+                    <div class="message">Welcome to the Chatroom!</div>
+                </li>
+            </ul>
+            <div id="emojibar"></div>
+            <form id="input-form" action="">
+                <button type="button"><img class="form-button-icon" src="images/image-icon.png" alt="btn-icon"></button>
+                <button id="emojibtn" type="button" onClick="toggleEmojibar()"><img class="form-button-icon" src="images/emoji-icon.png" alt="btn-icon"></button>
+                <input id="m" placeholder="Enter your message..." autocomplete="off" required />
+                <button type="submit"><img class="form-button-icon" src="images/send-icon.png" alt="btn-icon"></button>
+            </form>
+        </div>
+        <div class="col" id="main-col-2">
+            <div id="chart-cont">
+                <canvas class="chart" id="analysis-chart"></canvas>
+            </div>
+            <div id="user-cont">
+                <table id="user-table">
+                    <thead>
+                      <tr>
+                        <th>Username</th>
+                        <th>Message</th>
+                        <th>Time</th>
+                        <th>Sentiment</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                    </table>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    </body>
+</html>
