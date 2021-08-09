@@ -76,7 +76,7 @@ npm start
   <img width="660" height="300" src="/screenshots/hover.png">
 </p>
 
-## Video Example of system in full project (Chaperon Chat Monitor)
+<p align="center">Video Example of system in full project (Chaperon Chat Monitor)</p>
 
 https://user-images.githubusercontent.com/72448549/128709671-acfd2b0b-93f8-429a-baa6-fead57f758e0.mp4
 
